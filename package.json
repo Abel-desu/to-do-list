@@ -142,7 +142,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "preinstall": "npx npm-force-resolutions"
+
   },
   "repository": {
     "type": "git",
@@ -152,6 +154,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Abel-desu/to-do-list/issues"
+  },
+  "resolutions": {
+    "node-sass": "https://registry.npmjs.org/dart-sass/-/dart-sass-1.25.0.tgz"
   },
   "homepage": "https://github.com/Abel-desu/to-do-list#readme",
   "keywords": []

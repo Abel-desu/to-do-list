@@ -1,93 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+form {
+  display: flex;
+  flex-direction: column;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
+  background-color: #f6f6f6;
+}
+
+.main-div {
+  box-shadow: 1px 6px 17px -1px rgba(34, 60, 80, 0.19);
+  width: 40vw;
+  font-family: Poppins, serif;
+  font-size: 18px;
+  background-color: #fff;
 }
 
 section {
-  box-shadow: 1px 6px 17px -1px rgba(34, 60, 80, 0.19);
-  padding-top: 20px;
-  width: 40vw;
-}
-
-.header {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: 35px 15px;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
-.fa-trash-alt {
-  display: none;
-}
-
-.trash-active {
-  display: block;
-}
-
-/* .checkTodo {
-  text-decoration: line-through;
-} */
-
-/* .checkedContainer{
-  background-color: #fffed3;
-} */
-.edit-desable {
-  display: none;
-}
-
-.editInput {
-  background-color: #fffed3;
+.input-div {
+  padding: 15px;
+  border-bottom: 1px solid #d0d0d0;
+  display: flex;
+  align-items: center;
 }
 
 input {
-  width: 100%;
   border: none;
-  outline: none;
-  padding-left: 20px;
-  font-family: italic;
+  padding: 15px;
+  font-style: oblique;
   font-size: 18px;
-  padding-bottom: 12px;
+  border-bottom: 1px solid #d0d0d0;
 }
 
-.todoContainer {
-  border-top: 1px solid #d0d0d0;
-  border-bottom: 1px solid #d0d0d0;
-  display: flex;
-  padding: 30px 10px;
-  align-items: center;
+p {
+  padding: 10px;
 }
 
 button {
+  text-align: center;
+  color: #989898;
+  margin: 0;
+  padding: 25px;
   width: 100%;
-  border: none;
-  background-color: #fff;
-  padding: 25px 0;
-  font-size: 18px;
-  color: #d0d0d0;
-  border-top: 1px solid #d0d0d0;
-}
-
-.checkbox {
-  width: 10%;
 }
 
 button:hover {
   cursor: pointer;
 }
 
-.fa-sync-alt {
-  font-size: 20px;
+i {
+  float: right;
 }
 
-span {
-  flex: 1;
+#header {
+  font-weight: bold;
+  padding: 15px;
+}
+
+.todoContainer {
+  flex: 2;
+  border: none;
+  margin: 18px 0;
+}
+
+.todoContainer-disable {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.remove-icon-active {
+  display: none;
+}
+
+.icon2 {
+  display: none;
+}
+
+.changeBg {
+  background-color: #fffed3;
 }

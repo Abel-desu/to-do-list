@@ -2,7 +2,6 @@ import './style.css';
 
 const textInput = document.querySelector('input');
 const todosMaincontainer = document.querySelector('.todos-container');
-const clearAllbtn = document.querySelector('button');
 
 class MyObject {
   constructor(description, completed, index) {

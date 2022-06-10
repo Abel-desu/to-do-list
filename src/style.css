@@ -1,45 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-*{
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   display: flex;
-justify-content: center;
-padding-top: 20px;
+  justify-content: center;
+  padding-top: 20px;
 }
-section{
-box-shadow: 1px 6px 17px -1px rgba(34, 60, 80, 0.19); 
-padding-top: 20px;
-width: 40vw;
+
+section {
+  box-shadow: 1px 6px 17px -1px rgba(34, 60, 80, 0.19);
+  padding-top: 20px;
+  width: 40vw;
 }
-.header{
+
+.header {
   display: flex;
   justify-content: space-between;
   padding: 35px 15px;
   align-items: center;
 }
-.fa-trash-alt{
+
+.fa-trash-alt {
   display: none;
 }
 
-.trash-active{
+.trash-active {
   display: block;
 }
+
 /* .checkTodo {
   text-decoration: line-through;
 } */
+
 /* .checkedContainer{
   background-color: #fffed3;
 } */
-.edit-desable{
+.edit-desable {
   display: none;
 }
-.editInput{
+
+.editInput {
   background-color: #fffed3;
 }
-input{
+
+input {
   width: 100%;
   border: none;
   outline: none;
@@ -48,31 +57,37 @@ input{
   font-size: 18px;
   padding-bottom: 12px;
 }
-.todoContainer{
+
+.todoContainer {
   border-top: 1px solid #d0d0d0;
   border-bottom: 1px solid #d0d0d0;
   display: flex;
   padding: 30px 10px;
   align-items: center;
 }
-button{
+
+button {
   width: 100%;
   border: none;
   background-color: #fff;
-  padding:  25px 0;
-  font-size:  18px;
+  padding: 25px 0;
+  font-size: 18px;
   color: #d0d0d0;
   border-top: 1px solid #d0d0d0;
 }
+
 .checkbox {
   width: 10%;
 }
-button:hover{
+
+button:hover {
   cursor: pointer;
 }
-.fa-sync-alt{
+
+.fa-sync-alt {
   font-size: 20px;
 }
+
 span {
-flex: 1;
+  flex: 1;
 }

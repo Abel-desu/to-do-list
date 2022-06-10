@@ -77,12 +77,31 @@ const createList = () => {
     }
     localStorage.setItem('list', JSON.stringify(empty));
   });
+// clear all
+const clearAll = document.querySelector('.clear');
+clearAll.addEventListener('click', () => {
+  const getting = JSON.parse(localStorage.getItem('list'));
+  const variable = document.querySelectorAll('.change');
+  for (let i = 0; i < variable.length; i += 1) {
+    form.removeChild(variable[i]);
+  }
+  const empty = [];
+  for (let i = 0; i < getting.length; i += 1) {
+    if (getting[i].completed === true) {
+      continue;
+    }
+    empty.push(getting[i]);
+  }
+  localStorage.setItem('list', JSON.stringify(empty));
+});
 
   editIcons.addEventListener('click', () => {
     const editInput = document.createElement('input');
     editInput.type = 'text';
     editInput.className = 'todoContainer';
     editInput.value = inputText.textContent;
+    editInput.style.backgroundColor = '#fffed3';
+    list.style.backgroundColor = '#fffed3';
     list.replaceChild(editInput, inputText);
     editInput.addEventListener('keypress', (e) => {
       if (e.key === 'Enter' && editInput.value) {
@@ -120,7 +139,6 @@ Input.addEventListener('keypress', (e) => {
     sendToLocalStorage();
   }
 });
-
 // Window Load event
 window.addEventListener('load', () => {
   const getFromLocalStorage = JSON.parse(localStorage.getItem('list'));

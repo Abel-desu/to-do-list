@@ -1,5 +1,5 @@
 import './style.css';
-import todo from './modules/add.js';
+import TODO from './modules/add.js';
 import { real, displayUI, newTask } from './modules/reload.js';
 import { read, addButton } from './modules/addtask.js';
 
@@ -8,7 +8,7 @@ addButton.addEventListener('click', (e) => {
   tasks = JSON.parse(localStorage.getItem('list')) || [];
   e.preventDefault();
   const findIndex = tasks.length;
-  const task1 = new todo(read.value, false, findIndex + 1);
+  const task1 = new TODO(read.value, false, findIndex + 1);
   tasks.push(task1);
   real(task1);
   read.value = '';
@@ -17,7 +17,6 @@ addButton.addEventListener('click', (e) => {
 
 newTask.addEventListener('click', (e) => {
   tasks = JSON.parse(localStorage.getItem('list')) || [];
-
   if (e.target.classList.contains('remove')) {
     e.target.parentElement.parentElement.remove();
     const k = parseInt(e.target.id, 10);

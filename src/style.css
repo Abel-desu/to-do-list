@@ -41,13 +41,15 @@
   gap: 0.125rem;
   margin-top: 80px;
 }
-.add{
+
+.add {
   display: none;
 }
+
 .clear {
   width: 31.5rem;
   height: 3rem;
-  box-shadow: 1px 1px 2px 1px gray; 
+  box-shadow: 1px 1px 2px 1px gray;
 }
 
 h4 {

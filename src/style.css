@@ -1,89 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-body {
-  background-color: #f6f6f6;
-}
-
-.main-div {
-  box-shadow: 1px 6px 17px -1px rgba(34, 60, 80, 0.19);
-  width: 40vw;
-  font-family: Poppins, serif;
-  font-size: 18px;
-  background-color: #fff;
-}
-
-section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.input-div {
-  padding: 15px;
-  border-bottom: 1px solid #d0d0d0;
-  display: flex;
-  align-items: center;
-}
-
-input {
-  border: none;
-  padding: 15px;
-  font-style: oblique;
-  font-size: 18px;
-  border-bottom: 1px solid #d0d0d0;
-}
-
-p {
-  padding: 10px;
-}
-
-button {
-  text-align: center;
-  color: #989898;
-  margin: 0;
-  padding: 25px;
-  width: 100%;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-i {
-  float: right;
-}
-
-#header {
+.new-task-pro {
+  display: grid;
+  grid-template-columns: 1fr 21fr 1fr;
+  align-items: baseline;
+  width: 31.25rem;
+  box-shadow: 1px 1px 2px 1px gray;
   font-weight: bold;
-  padding: 15px;
 }
 
-.todoContainer {
-  flex: 2;
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  box-shadow: 1px 1px 2px 1px gray;
+}
+
+.form {
+  width: 100%;
+}
+
+.form-input {
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  box-shadow: 1px 1px 5px 1px gray;
+}
+
+#new-task-input {
+  width: 31.25rem;
+  height: 1.875rem;
+  outline: none;
   border: none;
-  margin: 18px 0;
 }
 
-.todoContainer-disable {
-  text-decoration: line-through;
-  opacity: 0.6;
+.all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin-left: 25%;
+  gap: 0.125rem;
+  margin-top: 80px;
 }
 
-.remove-icon-active {
+.add {
   display: none;
 }
 
-.icon2 {
-  display: none;
+.clear {
+  width: 31.5rem;
+  height: 3rem;
+  box-shadow: 1px 1px 2px 1px gray;
 }
 
-.changeBg {
-  background-color: #fffed3;
+h4 {
+  padding-left: 0.3125rem;
+}
+
+.refresh {
+  padding-right: 0.4375rem;
 }

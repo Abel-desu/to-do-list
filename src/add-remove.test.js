@@ -1,6 +1,14 @@
-import { addTodo, deleteTodo } from './modules/add.js';
+import {
+  addTodo,
+  deleteTodo,
+  removeAllCompleted,
+  editTodo,
+  updateTodoStatus,
+} from './modules/add.js';
+import tasksMock from '../__mocks__/mock.json';
 
-let tasks = [];
+let tasks = tasksMock;
+
 describe('add and remove test', () => {
   test('add todo', () => {
     const { length } = tasks;
@@ -20,4 +28,19 @@ describe('add and remove test', () => {
 
     expect(tasks.length).toBe(length - 1);
   });
+});
+test('Remove all', () => {
+  const lengthArray = tasks.length;
+  tasks = removeAllCompleted(tasks);
+  expect(tasks).toHaveLength(lengthArray - 1);
+});
+
+test('edit todo', () => {
+  tasks = editTodo(tasks, 'edited task', 1);
+  expect(tasks[1].description).toBe('edited task');
+});
+
+test('update todo status', () => {
+  tasks = updateTodoStatus(tasks, 1);
+  expect(tasks[1].completed).toBe(true);
 });
